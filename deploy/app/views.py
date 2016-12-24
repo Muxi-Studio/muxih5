@@ -9,4 +9,6 @@ def test():
     return "<h1>just tell you everything is ok!</h1>"
 
 # you can writing your views here
-
+@app.route('/')
+def index():
+    return "<h1>muxi❤️ html5</h1>"

@@ -1,5 +1,7 @@
 # MuxiH5
 
+[![Website](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://h5.muxixyz.com)
+
 > This is an era of mobile priority😂
 
 this repo for muxi html5 automatic deployment
