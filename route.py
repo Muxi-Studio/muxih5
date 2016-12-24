@@ -7,6 +7,6 @@ from flask import render_template, request
 def index():
     platform = request.user_agent.platform
     if platform in ["android", "iphone", "ipad"]:
-        return render_template('index_m.html')
+        return render_template('{{ h5blueprint }}_index_m.html')
     else:
-        return render_template('index_d.html')
+        return render_template('{{ h5blueprint }}_index_d.html')
