@@ -1,0 +1,7 @@
+deploy:
+    build: .
+    env_file:
+        - deploy.env
+    command: gunicorn --name deploy -b 0.0.0.0:8555 -w 2 wsgi:app
+    ports:
+        - "8555:8555"
