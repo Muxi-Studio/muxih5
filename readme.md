@@ -2,7 +2,6 @@
 
 > This is an era of mobile priority😂
 
-
 this repo for muxi html5 automatic deployment
 <hr/>
 
@@ -10,6 +9,8 @@ this repo for muxi html5 automatic deployment
 ### Step1:📝 Clone this repo
 
     $ git clone https://github.com/Muxi-Studio/muxih5.git
+
+=> if you have copied the repository, don't forget to pull it!
 
 ### Step2:📱 Add html5 statics and template
 
