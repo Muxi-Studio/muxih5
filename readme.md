@@ -29,13 +29,19 @@ h5 statics&template structure example
             -- index_m.html(mobile index page)
             -- index_d.html(desktop index page)
 
+
+=> h5 name can't start with a number
+=> static can be omitted, if you use cdn
+
 ### Step3. 🐙 Commit and push!
 
     $ git add / commit / push
 
 ### Step4. 🍺 Cheers!
 
-Once you commit, the webhook will pull your changes and automaic deployment!
+Once you commit, the webhook will pull your changes and automaic deployment!  <br/>
+
+check [h5.muxixyz.com/{h5_name}]() for your awesome h5!
 
 ## License
 
