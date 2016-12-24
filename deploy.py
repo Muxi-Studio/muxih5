@@ -45,7 +45,9 @@ def copy_statics(h5_list, deploy_path):
         try:
             if os.path.isdir(deploy_h5_static_path):
                 shutil.rmtree(deploy_h5_static_path)
-            shutil.copytree(h5_static_path, deploy_h5_static_path)
+            if os.path.isdir(h5_static_path):
+                shutil.copytree(h5_static_path, deploy_h5_static_path)
+            else: pass
         except:
             raise
     return 
