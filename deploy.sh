@@ -1,3 +1,3 @@
 #!/bin/sh
 
-cd deploy && docker-compose build && docker-compose up -d
+cd deploy && docker-compose build && docker-compose stop && docker-compose up -d
