@@ -30,7 +30,7 @@ h5 statics&template structure example
             -- index_d.html(desktop index page)
 
 
-=> h5 name can't start with a number
+=> h5 name can't start with a number <br/>
 => static can be omitted, if you use cdn
 
 ### Step3. 🐙 Commit and push!
