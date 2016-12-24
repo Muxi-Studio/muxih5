@@ -54,12 +54,12 @@ def copy_statics(h5_list, deploy_path):
 
 def copy_templates(h5_list, deploy_path):
     for h5 in h5_list:
-        h5_index_m = os.path.join(h5_path, '{h5}/index_m.html'.format(h5=h5))
+        h5_index_m = os.path.join(h5_path, '{h5}/{h5}_index_m.html'.format(h5=h5))
         deploy_h5_index_m = os.path.join(deploy_path,
-                'app/{h5}/templates/index_m.html'.format(h5=h5))
-        h5_index_d = os.path.join(h5_path, '{h5}/index_d.html'.format(h5=h5))
+                'app/{h5}/templates/{h5}_index_m.html'.format(h5=h5))
+        h5_index_d = os.path.join(h5_path, '{h5}/{h5}_index_d.html'.format(h5=h5))
         deploy_h5_index_d = os.path.join(deploy_path,
-                'app/{h5}/templates/index_d.html'.format(h5=h5))
+                'app/{h5}/templates/{h5}_index_d.html'.format(h5=h5))
         try:
             if os.path.isfile(h5_index_m):
                 shutil.copyfile(h5_index_m, deploy_h5_index_m)
