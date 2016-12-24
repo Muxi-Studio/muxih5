@@ -21,7 +21,7 @@ this repo for muxi html5 automatic deployment
 h5 statics&template structure example
 
     christmas(h5 name)
-            -- statics(statics)
+            -- static(static)
                 -- img
                     - (img files)
                 -- js
