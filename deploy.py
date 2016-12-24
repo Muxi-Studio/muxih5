@@ -61,8 +61,10 @@ def copy_templates(h5_list, deploy_path):
         deploy_h5_index_d = os.path.join(deploy_path,
                 'app/{h5}/templates/index_d.html'.format(h5=h5))
         try:
-            shutil.copyfile(h5_index_m, deploy_h5_index_m)
-            shutil.copyfile(h5_index_d, deploy_h5_index_d)
+            if os.path.isdir(h5_index_m):
+                shutil.copyfile(h5_index_m, deploy_h5_index_m)
+            if os.path.isdir(h5_index_d):
+                shutil.copyfile(h5_index_d, deploy_h5_index_d)
         except:
             raise
     return
