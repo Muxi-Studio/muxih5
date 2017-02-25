@@ -1,0 +1,371 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$loading-name: 'loading';
+$loading-x: 0px;
+$loading-y: 0px;
+$loading-offset-x: 0px;
+$loading-offset-y: 0px;
+$loading-width: 750px;
+$loading-height: 31px;
+$loading-total-width: 750px;
+$loading-total-height: 19939px;
+$loading-image: '../sprite/sprite.png';
+$loading: (0px, 0px, 0px, 0px, 750px, 31px, 750px, 19939px, '../sprite/sprite.png', 'loading', );
+$loading-inner-name: 'loading_inner';
+$loading-inner-x: 0px;
+$loading-inner-y: 31px;
+$loading-inner-offset-x: 0px;
+$loading-inner-offset-y: -31px;
+$loading-inner-width: 750px;
+$loading-inner-height: 31px;
+$loading-inner-total-width: 750px;
+$loading-inner-total-height: 19939px;
+$loading-inner-image: '../sprite/sprite.png';
+$loading-inner: (0px, 31px, 0px, -31px, 750px, 31px, 750px, 19939px, '../sprite/sprite.png', 'loading_inner', );
+$next-bt-name: 'next_bt';
+$next-bt-x: 0px;
+$next-bt-y: 62px;
+$next-bt-offset-x: 0px;
+$next-bt-offset-y: -62px;
+$next-bt-width: 81px;
+$next-bt-height: 107px;
+$next-bt-total-width: 750px;
+$next-bt-total-height: 19939px;
+$next-bt-image: '../sprite/sprite.png';
+$next-bt: (0px, 62px, 0px, -62px, 81px, 107px, 750px, 19939px, '../sprite/sprite.png', 'next_bt', );
+$home-ship-name: 'home_ship';
+$home-ship-x: 0px;
+$home-ship-y: 169px;
+$home-ship-offset-x: 0px;
+$home-ship-offset-y: -169px;
+$home-ship-width: 742px;
+$home-ship-height: 109px;
+$home-ship-total-width: 750px;
+$home-ship-total-height: 19939px;
+$home-ship-image: '../sprite/sprite.png';
+$home-ship: (0px, 169px, 0px, -169px, 742px, 109px, 750px, 19939px, '../sprite/sprite.png', 'home_ship', );
+$hack-light-name: 'hack_light';
+$hack-light-x: 0px;
+$hack-light-y: 278px;
+$hack-light-offset-x: 0px;
+$hack-light-offset-y: -278px;
+$hack-light-width: 750px;
+$hack-light-height: 114px;
+$hack-light-total-width: 750px;
+$hack-light-total-height: 19939px;
+$hack-light-image: '../sprite/sprite.png';
+$hack-light: (0px, 278px, 0px, -278px, 750px, 114px, 750px, 19939px, '../sprite/sprite.png', 'hack_light', );
+$android-color-2-name: 'android_color_2';
+$android-color-2-x: 0px;
+$android-color-2-y: 392px;
+$android-color-2-offset-x: 0px;
+$android-color-2-offset-y: -392px;
+$android-color-2-width: 750px;
+$android-color-2-height: 287px;
+$android-color-2-total-width: 750px;
+$android-color-2-total-height: 19939px;
+$android-color-2-image: '../sprite/sprite.png';
+$android-color-2: (0px, 392px, 0px, -392px, 750px, 287px, 750px, 19939px, '../sprite/sprite.png', 'android_color_2', );
+$product-color-name: 'product_color';
+$product-color-x: 0px;
+$product-color-y: 679px;
+$product-color-offset-x: 0px;
+$product-color-offset-y: -679px;
+$product-color-width: 712px;
+$product-color-height: 441px;
+$product-color-total-width: 750px;
+$product-color-total-height: 19939px;
+$product-color-image: '../sprite/sprite.png';
+$product-color: (0px, 679px, 0px, -679px, 712px, 441px, 750px, 19939px, '../sprite/sprite.png', 'product_color', );
+$group-2-3-name: 'group_2_3';
+$group-2-3-x: 0px;
+$group-2-3-y: 1120px;
+$group-2-3-offset-x: 0px;
+$group-2-3-offset-y: -1120px;
+$group-2-3-width: 572px;
+$group-2-3-height: 451px;
+$group-2-3-total-width: 750px;
+$group-2-3-total-height: 19939px;
+$group-2-3-image: '../sprite/sprite.png';
+$group-2-3: (0px, 1120px, 0px, -1120px, 572px, 451px, 750px, 19939px, '../sprite/sprite.png', 'group_2_3', );
+$android-color-1-name: 'android_color_1';
+$android-color-1-x: 0px;
+$android-color-1-y: 1571px;
+$android-color-1-offset-x: 0px;
+$android-color-1-offset-y: -1571px;
+$android-color-1-width: 750px;
+$android-color-1-height: 527px;
+$android-color-1-total-width: 750px;
+$android-color-1-total-height: 19939px;
+$android-color-1-image: '../sprite/sprite.png';
+$android-color-1: (0px, 1571px, 0px, -1571px, 750px, 527px, 750px, 19939px, '../sprite/sprite.png', 'android_color_1', );
+$ship-light-name: 'ship_light';
+$ship-light-x: 0px;
+$ship-light-y: 2098px;
+$ship-light-offset-x: 0px;
+$ship-light-offset-y: -2098px;
+$ship-light-width: 750px;
+$ship-light-height: 645px;
+$ship-light-total-width: 750px;
+$ship-light-total-height: 19939px;
+$ship-light-image: '../sprite/sprite.png';
+$ship-light: (0px, 2098px, 0px, -2098px, 750px, 645px, 750px, 19939px, '../sprite/sprite.png', 'ship_light', );
+$group-3-2-name: 'group_3_2';
+$group-3-2-x: 0px;
+$group-3-2-y: 2743px;
+$group-3-2-offset-x: 0px;
+$group-3-2-offset-y: -2743px;
+$group-3-2-width: 748px;
+$group-3-2-height: 662px;
+$group-3-2-total-width: 750px;
+$group-3-2-total-height: 19939px;
+$group-3-2-image: '../sprite/sprite.png';
+$group-3-2: (0px, 2743px, 0px, -2743px, 748px, 662px, 750px, 19939px, '../sprite/sprite.png', 'group_3_2', );
+$design-line-2-name: 'design_line_2';
+$design-line-2-x: 0px;
+$design-line-2-y: 3405px;
+$design-line-2-offset-x: 0px;
+$design-line-2-offset-y: -3405px;
+$design-line-2-width: 750px;
+$design-line-2-height: 668px;
+$design-line-2-total-width: 750px;
+$design-line-2-total-height: 19939px;
+$design-line-2-image: '../sprite/sprite.png';
+$design-line-2: (0px, 3405px, 0px, -3405px, 750px, 668px, 750px, 19939px, '../sprite/sprite.png', 'design_line_2', );
+$front-end-color-name: 'front_end_color';
+$front-end-color-x: 0px;
+$front-end-color-y: 4073px;
+$front-end-color-offset-x: 0px;
+$front-end-color-offset-y: -4073px;
+$front-end-color-width: 750px;
+$front-end-color-height: 672px;
+$front-end-color-total-width: 750px;
+$front-end-color-total-height: 19939px;
+$front-end-color-image: '../sprite/sprite.png';
+$front-end-color: (0px, 4073px, 0px, -4073px, 750px, 672px, 750px, 19939px, '../sprite/sprite.png', 'front_end_color', );
+$ship-color-name: 'ship_color';
+$ship-color-x: 0px;
+$ship-color-y: 4745px;
+$ship-color-offset-x: 0px;
+$ship-color-offset-y: -4745px;
+$ship-color-width: 750px;
+$ship-color-height: 711px;
+$ship-color-total-width: 750px;
+$ship-color-total-height: 19939px;
+$ship-color-image: '../sprite/sprite.png';
+$ship-color: (0px, 4745px, 0px, -4745px, 750px, 711px, 750px, 19939px, '../sprite/sprite.png', 'ship_color', );
+$back-end-ship-name: 'back_end_ship';
+$back-end-ship-x: 0px;
+$back-end-ship-y: 5456px;
+$back-end-ship-offset-x: 0px;
+$back-end-ship-offset-y: -5456px;
+$back-end-ship-width: 750px;
+$back-end-ship-height: 714px;
+$back-end-ship-total-width: 750px;
+$back-end-ship-total-height: 19939px;
+$back-end-ship-image: '../sprite/sprite.png';
+$back-end-ship: (0px, 5456px, 0px, -5456px, 750px, 714px, 750px, 19939px, '../sprite/sprite.png', 'back_end_ship', );
+$group-2-2-name: 'group_2_2';
+$group-2-2-x: 0px;
+$group-2-2-y: 6170px;
+$group-2-2-offset-x: 0px;
+$group-2-2-offset-y: -6170px;
+$group-2-2-width: 750px;
+$group-2-2-height: 760px;
+$group-2-2-total-width: 750px;
+$group-2-2-total-height: 19939px;
+$group-2-2-image: '../sprite/sprite.png';
+$group-2-2: (0px, 6170px, 0px, -6170px, 750px, 760px, 750px, 19939px, '../sprite/sprite.png', 'group_2_2', );
+$design-line-1-name: 'design_line_1';
+$design-line-1-x: 0px;
+$design-line-1-y: 6930px;
+$design-line-1-offset-x: 0px;
+$design-line-1-offset-y: -6930px;
+$design-line-1-width: 750px;
+$design-line-1-height: 1285px;
+$design-line-1-total-width: 750px;
+$design-line-1-total-height: 19939px;
+$design-line-1-image: '../sprite/sprite.png';
+$design-line-1: (0px, 6930px, 0px, -6930px, 750px, 1285px, 750px, 19939px, '../sprite/sprite.png', 'design_line_1', );
+$home-ship-line-name: 'home_ship_line';
+$home-ship-line-x: 0px;
+$home-ship-line-y: 8215px;
+$home-ship-line-offset-x: 0px;
+$home-ship-line-offset-y: -8215px;
+$home-ship-line-width: 750px;
+$home-ship-line-height: 1285px;
+$home-ship-line-total-width: 750px;
+$home-ship-line-total-height: 19939px;
+$home-ship-line-image: '../sprite/sprite.png';
+$home-ship-line: (0px, 8215px, 0px, -8215px, 750px, 1285px, 750px, 19939px, '../sprite/sprite.png', 'home_ship_line', );
+$group-3-1-name: 'group_3_1';
+$group-3-1-x: 0px;
+$group-3-1-y: 9500px;
+$group-3-1-offset-x: 0px;
+$group-3-1-offset-y: -9500px;
+$group-3-1-width: 750px;
+$group-3-1-height: 1285px;
+$group-3-1-total-width: 750px;
+$group-3-1-total-height: 19939px;
+$group-3-1-image: '../sprite/sprite.png';
+$group-3-1: (0px, 9500px, 0px, -9500px, 750px, 1285px, 750px, 19939px, '../sprite/sprite.png', 'group_3_1', );
+$product-line-name: 'product_line';
+$product-line-x: 0px;
+$product-line-y: 10785px;
+$product-line-offset-x: 0px;
+$product-line-offset-y: -10785px;
+$product-line-width: 750px;
+$product-line-height: 1285px;
+$product-line-total-width: 750px;
+$product-line-total-height: 19939px;
+$product-line-image: '../sprite/sprite.png';
+$product-line: (0px, 10785px, 0px, -10785px, 750px, 1285px, 750px, 19939px, '../sprite/sprite.png', 'product_line', );
+$android-line-name: 'android_line';
+$android-line-x: 0px;
+$android-line-y: 12070px;
+$android-line-offset-x: 0px;
+$android-line-offset-y: -12070px;
+$android-line-width: 750px;
+$android-line-height: 1285px;
+$android-line-total-width: 750px;
+$android-line-total-height: 19939px;
+$android-line-image: '../sprite/sprite.png';
+$android-line: (0px, 12070px, 0px, -12070px, 750px, 1285px, 750px, 19939px, '../sprite/sprite.png', 'android_line', );
+$front-end-line-name: 'front_end_line';
+$front-end-line-x: 0px;
+$front-end-line-y: 13355px;
+$front-end-line-offset-x: 0px;
+$front-end-line-offset-y: -13355px;
+$front-end-line-width: 750px;
+$front-end-line-height: 1285px;
+$front-end-line-total-width: 750px;
+$front-end-line-total-height: 19939px;
+$front-end-line-image: '../sprite/sprite.png';
+$front-end-line: (0px, 13355px, 0px, -13355px, 750px, 1285px, 750px, 19939px, '../sprite/sprite.png', 'front_end_line', );
+$group-2-1-name: 'group_2_1';
+$group-2-1-x: 0px;
+$group-2-1-y: 14640px;
+$group-2-1-offset-x: 0px;
+$group-2-1-offset-y: -14640px;
+$group-2-1-width: 750px;
+$group-2-1-height: 1310px;
+$group-2-1-total-width: 750px;
+$group-2-1-total-height: 19939px;
+$group-2-1-image: '../sprite/sprite.png';
+$group-2-1: (0px, 14640px, 0px, -14640px, 750px, 1310px, 750px, 19939px, '../sprite/sprite.png', 'group_2_1', );
+$hack-ship-name: 'hack_ship';
+$hack-ship-x: 0px;
+$hack-ship-y: 15950px;
+$hack-ship-offset-x: 0px;
+$hack-ship-offset-y: -15950px;
+$hack-ship-width: 750px;
+$hack-ship-height: 1321px;
+$hack-ship-total-width: 750px;
+$hack-ship-total-height: 19939px;
+$hack-ship-image: '../sprite/sprite.png';
+$hack-ship: (0px, 15950px, 0px, -15950px, 750px, 1321px, 750px, 19939px, '../sprite/sprite.png', 'hack_ship', );
+$bg-filter-name: 'bg_filter';
+$bg-filter-x: 0px;
+$bg-filter-y: 17271px;
+$bg-filter-offset-x: 0px;
+$bg-filter-offset-y: -17271px;
+$bg-filter-width: 750px;
+$bg-filter-height: 1334px;
+$bg-filter-total-width: 750px;
+$bg-filter-total-height: 19939px;
+$bg-filter-image: '../sprite/sprite.png';
+$bg-filter: (0px, 17271px, 0px, -17271px, 750px, 1334px, 750px, 19939px, '../sprite/sprite.png', 'bg_filter', );
+$bg-name: 'bg';
+$bg-x: 0px;
+$bg-y: 18605px;
+$bg-offset-x: 0px;
+$bg-offset-y: -18605px;
+$bg-width: 750px;
+$bg-height: 1334px;
+$bg-total-width: 750px;
+$bg-total-height: 19939px;
+$bg-image: '../sprite/sprite.png';
+$bg: (0px, 18605px, 0px, -18605px, 750px, 1334px, 750px, 19939px, '../sprite/sprite.png', 'bg', );
+$spritesheet-width: 750px;
+$spritesheet-height: 19939px;
+$spritesheet-image: '../sprite/sprite.png';
+$spritesheet-sprites: ($loading, $loading-inner, $next-bt, $home-ship, $hack-light, $android-color-2, $product-color, $group-2-3, $android-color-1, $ship-light, $group-3-2, $design-line-2, $front-end-color, $ship-color, $back-end-ship, $group-2-2, $design-line-1, $home-ship-line, $group-3-1, $product-line, $android-line, $front-end-line, $group-2-1, $hack-ship, $bg-filter, $bg, );
+$spritesheet: (750px, 19939px, '../sprite/sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
