@@ -31,6 +31,7 @@ h5 statics&template structure example
             -- index_m.html(mobile index page)
             -- index_d.html(desktop index page)
 
+### IMPORTANT: static file path: "/{h5_name}/static/xxxx"
 
 => h5 name can't start with a number <br/>
 => static can be omitted, if you use cdn
