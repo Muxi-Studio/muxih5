@@ -1,0 +1,151 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$addoil-name: 'addoil';
+$addoil-x: 0px;
+$addoil-y: 0px;
+$addoil-offset-x: 0px;
+$addoil-offset-y: 0px;
+$addoil-width: 1242px;
+$addoil-height: 305px;
+$addoil-total-width: 1242px;
+$addoil-total-height: 7758px;
+$addoil-image: '../sprite/sprite.png';
+$addoil: (0px, 0px, 0px, 0px, 1242px, 305px, 1242px, 7758px, '../sprite/sprite.png', 'addoil', );
+$article-name: 'article';
+$article-x: 0px;
+$article-y: 305px;
+$article-offset-x: 0px;
+$article-offset-y: -305px;
+$article-width: 1242px;
+$article-height: 305px;
+$article-total-width: 1242px;
+$article-total-height: 7758px;
+$article-image: '../sprite/sprite.png';
+$article: (0px, 305px, 0px, -305px, 1242px, 305px, 1242px, 7758px, '../sprite/sprite.png', 'article', );
+$gotext-name: 'gotext';
+$gotext-x: 0px;
+$gotext-y: 610px;
+$gotext-offset-x: 0px;
+$gotext-offset-y: -610px;
+$gotext-width: 1215px;
+$gotext-height: 524px;
+$gotext-total-width: 1242px;
+$gotext-total-height: 7758px;
+$gotext-image: '../sprite/sprite.png';
+$gotext: (0px, 610px, 0px, -610px, 1215px, 524px, 1242px, 7758px, '../sprite/sprite.png', 'gotext', );
+$bgimg-name: 'bgimg';
+$bgimg-x: 0px;
+$bgimg-y: 1134px;
+$bgimg-offset-x: 0px;
+$bgimg-offset-y: -1134px;
+$bgimg-width: 1242px;
+$bgimg-height: 2208px;
+$bgimg-total-width: 1242px;
+$bgimg-total-height: 7758px;
+$bgimg-image: '../sprite/sprite.png';
+$bgimg: (0px, 1134px, 0px, -1134px, 1242px, 2208px, 1242px, 7758px, '../sprite/sprite.png', 'bgimg', );
+$board-name: 'board';
+$board-x: 0px;
+$board-y: 3342px;
+$board-offset-x: 0px;
+$board-offset-y: -3342px;
+$board-width: 1242px;
+$board-height: 2208px;
+$board-total-width: 1242px;
+$board-total-height: 7758px;
+$board-image: '../sprite/sprite.png';
+$board: (0px, 3342px, 0px, -3342px, 1242px, 2208px, 1242px, 7758px, '../sprite/sprite.png', 'board', );
+$intro-name: 'intro';
+$intro-x: 0px;
+$intro-y: 5550px;
+$intro-offset-x: 0px;
+$intro-offset-y: -5550px;
+$intro-width: 1242px;
+$intro-height: 2208px;
+$intro-total-width: 1242px;
+$intro-total-height: 7758px;
+$intro-image: '../sprite/sprite.png';
+$intro: (0px, 5550px, 0px, -5550px, 1242px, 2208px, 1242px, 7758px, '../sprite/sprite.png', 'intro', );
+$spritesheet-width: 1242px;
+$spritesheet-height: 7758px;
+$spritesheet-image: '../sprite/sprite.png';
+$spritesheet-sprites: ($addoil, $article, $gotext, $bgimg, $board, $intro, );
+$spritesheet: (1242px, 7758px, '../sprite/sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

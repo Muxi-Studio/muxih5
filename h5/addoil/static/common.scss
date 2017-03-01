@@ -1,0 +1,27 @@
+@function x_size($size_x) {
+    @return ($size_x / 750)*100%;
+}
+@function y_size($size_y) {
+    @return ($size_y / 1334)*100%;
+}
+
+@import './static/mixins/_sprite.scss';
+
+@mixin sprite__size($sprite,$box_height) {
+  $sprite-total-height: nth($sprite, 8);
+  background-size: auto  ($sprite-total-height / $box_height) * 100%;
+}
+
+@mixin sprite__position($sprite,$box_height) {
+  $sprite-total-height: nth($sprite, 8);
+  $sprite-total-height: nth($sprite, 8);
+  $sprite-y: nth($sprite, 2) / ($sprite-total-height - $box_height) * 100%;
+  background-position: center  $sprite-y;
+}
+
+@mixin _sprite($sprite,$box_height) {
+  @include sprite-image($sprite);
+  @include sprite__position($sprite,$box_height);
+  @include sprite__size($sprite,$box_height);
+  background-repeat: no-repeat;
+}
