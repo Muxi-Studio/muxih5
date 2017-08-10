@@ -28,8 +28,8 @@ h5 statics&template structure example
                     - (js files)
                 -- css
                     - (css files)
-            -- index_m.html(mobile index page)
-            -- index_d.html(desktop index page)
+            -- <h5name>_index_m.html(mobile index page)
+            -- <h5name>_index_d.html(desktop index page)
 
 ### IMPORTANT: static file path: "/{h5_name}/static/xxxx"
 
