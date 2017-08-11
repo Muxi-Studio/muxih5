@@ -1,7 +1,7 @@
 FROM python:2.7
 MAINTAINER neo1218 <neo1218@yeah.net>
 
-RUN pip install mana --index-url http://pypi.doubanio.com/simple/
+RUN pip install mana
 RUN python deploy.py
 
 ENV DEPLOY_PATH /deploy
