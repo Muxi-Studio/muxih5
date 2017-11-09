@@ -5,7 +5,7 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY . /usr/src/app
 
-RUN pip install mana
+RUN pip install --index-url http://pypi.doubanio.com/simple/ mana --trusted-host=pypi.doubanio.com
 RUN python deploy.py
 
 ENV DEPLOY_PATH /deploy
