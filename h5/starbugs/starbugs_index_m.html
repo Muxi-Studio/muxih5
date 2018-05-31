@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>STARBUGS</title>
+  <style>
+    html,body{ height:100%; margin: 0; padding: 0;}
+    #container{ height:100%; padding-top: 1px; box-sizing:border-box; -webkt-box-sizing:border-box;}
+  </style>
+  <script src="http://p9lce13x8.bkt.clouddn.com/phaser.min.js"></script>
+  <script src="http://p9lce13x8.bkt.clouddn.com/gif.js"></script>
+  <script src="http://p9lce13x8.bkt.clouddn.com/mario_play.js"></script>
+  <script src="http://p9lce13x8.bkt.clouddn.com/block_play.js"></script>
+  <script src="http://p9lce13x8.bkt.clouddn.com/ball_play1.js"></script>
+  <script src="http://p9lce13x8.bkt.clouddn.com/ball_play2.js"></script>
+  <script src="http://p9lce13x8.bkt.clouddn.com/ball_play3.js"></script>
+  <script src="http://p9lce13x8.bkt.clouddn.com/end.js"></script>
+  <script src="http://p9lce13x8.bkt.clouddn.com/jump_play.js"></script>
+  <script src="http://p9lce13x8.bkt.clouddn.com/load.js"></script>
+  <script src="http://p9lce13x8.bkt.clouddn.com/gameover.js"></script>
+  <script src="http://p9lce13x8.bkt.clouddn.com/words.js"></script>
+  
+  <script>
+    var game;
+    var flage;
+    goPC();
+    function goPC()
+    {
+      var userAgentInfo = navigator.userAgent;
+      var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+      flage = true;
+      for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0)
+        { flage = false;
+          break; }
+      }
+      return flage;
+    }
+    // 检测pc（1）或手机端（0）
+    if(flage){
+      game = new Phaser.Game(640,1136,Phaser.CANVAS,'container');
+    }else{
+      game = new Phaser.Game(window.innerWidth,window.innerHeight,Phaser.CANVAS,'container');
+    }
+//增加游戏状态
+    game.state.add('load',load);
+    game.state.add('loadgif',loadgif);  
+    game.state.add('playmario',playMario);
+    game.state.add('playblock',playBlock);
+    game.state.add('playball_1',playball_1);
+    game.state.add('playball_2',playball_2);
+    game.state.add('playball_3',playball_3);
+    game.state.add('ending',ending);
+    game.state.add('playjump',playjump);
+    game.state.add('gameover',gameover);
+    game.state.add('addword',addword);
+
+
+
+
+//开始加载
+    game.state.start('load');
+  </script>
+</head>
+<body>
+<script>
+</script>
+<div id='container'></div>
+
+</body>
+</html>
