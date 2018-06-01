@@ -55,7 +55,7 @@
     var webview, AndroidQQ;
     if (u.indexOf("TBS") > -1) webview = true;
     var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
-    if (u.indexOf("QQ") > -1) AndroidQQ = true;
+    if (u.indexOf("V1_") > -1) AndroidQQ = true;
     if (webview && isAndroid && !AndroidQQ){
       var con = document.getElementById("container");
       var textnode = document.createElement("p");
