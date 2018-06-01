@@ -1,21 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>STARBUGS</title>
   <style>
-    html,body{ height:100%; margin: 0; padding: 0;}
-    #container{ height:100%; padding-top: 1px; box-sizing:border-box; -webkt-box-sizing:border-box;}
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    p {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 30px;
+    }
+    #container {
+      height: 100%;
+      padding-top: 1px;
+      box-sizing: border-box;
+      -webkt-box-sizing: border-box;
+    }
   </style>
+  <body>
+      <div id='container'></div>
+  </body>
   <script>
     var _hmt = _hmt || [];
-    (function() {
+    (function () {
       var hm = document.createElement("script");
       hm.src = "https://hm.baidu.com/hm.js?f898b18b84720f556cff457677b12ca1";
-      var s = document.getElementsByTagName("script")[0]; 
+      var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
-  </script>    
+  </script>
   <script src="http://p9lce13x8.bkt.clouddn.com/phaser.min.js"></script>
   <script src="http://p9lce13x8.bkt.clouddn.com/gif.js"></script>
   <script src="http://p9lce13x8.bkt.clouddn.com/mario_play.js"></script>
@@ -28,53 +49,58 @@
   <script src="http://p9lce13x8.bkt.clouddn.com/load.js"></script>
   <script src="http://p9lce13x8.bkt.clouddn.com/gameover.js"></script>
   <script src="http://p9lce13x8.bkt.clouddn.com/words.js"></script>
-  
+
   <script>
+    var u = navigator.userAgent;
+    var webview;
+    if (u.indexOf("TBS") > -1) webview = true;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+
+    if (webview && isAndroid){
+      var con = document.getElementById("container");
+      var textnode = document.createElement("p");
+      textnode.innerHTML = "请点击右上角使用外部浏览器打开噢~";  
+      con.appendChild(textnode);
+    } else {
     var game;
     var flage;
     goPC();
-    function goPC()
-    {
+
+    function goPC() {
       var userAgentInfo = navigator.userAgent;
       var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
       flage = true;
       for (var v = 0; v < Agents.length; v++) {
-        if (userAgentInfo.indexOf(Agents[v]) > 0)
-        { flage = false;
-          break; }
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+          flage = false;
+          break;
+        }
       }
       return flage;
     }
     // 检测pc（1）或手机端（0）
-    if(flage){
-      game = new Phaser.Game(640,1136,Phaser.CANVAS,'container');
-    }else{
-      game = new Phaser.Game(window.innerWidth,window.innerHeight,Phaser.CANVAS,'container');
+    if (flage) {
+      game = new Phaser.Game(640, 1136, Phaser.CANVAS, 'container');
+    } else {
+      game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.CANVAS, 'container');
     }
-//增加游戏状态
-    game.state.add('load',load);
-    game.state.add('loadgif',loadgif);  
-    game.state.add('playmario',playMario);
-    game.state.add('playblock',playBlock);
-    game.state.add('playball_1',playball_1);
-    game.state.add('playball_2',playball_2);
-    game.state.add('playball_3',playball_3);
-    game.state.add('ending',ending);
-    game.state.add('playjump',playjump);
-    game.state.add('gameover',gameover);
-    game.state.add('addword',addword);
+    //增加游戏状态
+    game.state.add('load', load);
+    game.state.add('loadgif', loadgif);
+    game.state.add('playmario', playMario);
+    game.state.add('playblock', playBlock);
+    game.state.add('playball_1', playball_1);
+    game.state.add('playball_2', playball_2);
+    game.state.add('playball_3', playball_3);
+    game.state.add('ending', ending);
+    game.state.add('playjump', playjump);
+    game.state.add('gameover', gameover);
+    game.state.add('addword', addword);
 
-
-
-
-//开始加载
+    //开始加载
     game.state.start('load');
+    }
   </script>
 </head>
-<body>
-<script>
-</script>
-<div id='container'></div>
 
-</body>
 </html>
