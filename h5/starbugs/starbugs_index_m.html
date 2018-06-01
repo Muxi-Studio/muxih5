@@ -52,7 +52,8 @@
 
   <script>
     var u = navigator.userAgent;
-    var webview, AndroidQQ;
+    var webview = false;
+    var AndroidQQ = false;
     if (u.indexOf("TBS") > -1) webview = true;
     var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
     if (u.indexOf("V1_") > -1) AndroidQQ = true;
