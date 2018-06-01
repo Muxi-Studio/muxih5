@@ -51,18 +51,6 @@
   <script src="http://p9lce13x8.bkt.clouddn.com/words.js"></script>
 
   <script>
-    var u = navigator.userAgent;
-    var webview = false;
-    var AndroidQQ = false;
-    if (u.indexOf("TBS") > -1) webview = true;
-    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
-    if (u.indexOf("V1_") > -1) AndroidQQ = true;
-    if (webview && isAndroid && !AndroidQQ){
-      var con = document.getElementById("container");
-      var textnode = document.createElement("p");
-      textnode.innerHTML = "请点击右上角使用外部浏览器打开噢~";  
-      con.appendChild(textnode);
-    } else {
     var game;
     var flage;
     goPC();
@@ -100,7 +88,6 @@
 
     //开始加载
     game.state.start('load');
-    }
   </script>
 </head>
 
